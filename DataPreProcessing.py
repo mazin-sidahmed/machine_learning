@@ -16,7 +16,7 @@ X[:, 1:3] = imp_mean.transform(X[:, 1:3])
 print('Taking care of missing data')
 print (X[:])
 
-#categorical data
+#encoding categorical data
 from sklearn.preprocessing import LabelEncoder , OneHotEncoder
 labelencoder_X = LabelEncoder()
 X[: , 0] = labelencoder_X.fit_transform(X[:, 0])
@@ -35,6 +35,8 @@ print (X)
 from sklearn.model_selection import train_test_split
 X_train,X_test , y_train, y_test = train_test_split(X,y , test_size = 0.2, random_state=0)
 print (X)
+
+#feature scaling
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler ()
 X_train = sc_X.fit_transform(X_train)
