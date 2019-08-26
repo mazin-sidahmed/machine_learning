@@ -26,3 +26,14 @@ y_train = sc_y.fit_transform(y_train)"""
 from sklearn.linear_model import LinearRegression
 regrosser = LinearRegression ()
 regrosser.fit(X_train,y_train)
+print ("xxxxxxxxxxxxxx")
+print (X_train)
+print("yyyyyyyyyyyyyyyyy")
+print (y_train)
+# predicting the test set result
+y_predict = regrosser.predict(X_test)
+print ("y the real one ")
+print(y_test)
+print ("the predicted y")
+print (y_predict)
+
