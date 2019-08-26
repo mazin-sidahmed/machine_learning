@@ -36,4 +36,17 @@ print ("y the real one ")
 print(y_test)
 print ("the predicted y")
 print (y_predict)
-
+# visulizing the traing set result
+plt.scatter(X_train , y_train , color = 'red')
+plt.plot(X_train , regrosser.predict(X_train) )
+plt.title('Salary vs Exprience (Training set) ')
+plt.xlabel ('Years of Experience')
+plt.ylabel ('Salary')
+plt.show () 
+# visulizing the test set result
+plt.scatter(X_test , y_test , color = 'red')
+plt.plot(X_train , regrosser.predict(X_train) )
+plt.title('Salary vs Exprience (Test set) ')
+plt.xlabel ('Years of Experience')
+plt.ylabel ('Salary')
+plt.show () 
