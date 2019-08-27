@@ -32,6 +32,10 @@ regressor.fit(X_train , y_train)
 
 # predicting the test set results
 y_predict = regressor.predict(X_test)
-print (y_test)
-print('#########333')
-print(y_predict)
+
+# bulding the optimal model using backword elimination
+import statsmodels.formula.api as smf
+X = np.append(arr = np.ones((50,1)).astype(int) , values = X , axis=1)
+optimal_X = X[:,[0, 1, 2, 3, 4, 5]] 
+regressor_OrdinaryLeastSquere =smf.ols(endog = y ,exog = optimal_X ).fit()
+regressor_OrdinaryLeastSquere.summary()
